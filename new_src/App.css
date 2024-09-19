@@ -1,0 +1,311 @@
+/* Tabs Styling */
+.tabs {
+  display: flex;
+  width: 100%;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.tabs button:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.tabs button.active {
+  background-color: #3d454d;
+  color: white;
+}
+.content {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+/* Panel (Tab Content) Styling */
+.panel {
+  display: none;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.panel.active {
+  display: block;
+}
+
+/* Sidenav Styling */
+.sidenav {
+  width: 200px;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #f4f4f4;
+}
+
+.App {
+  margin-left: 220px;
+  padding: 20px;
+}
+
+.sidenav button {
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  background-color: #3d454d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.sidenav input[type="date"] {
+  margin: 5px 0;
+  padding: 5px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.sidenav label {
+  display: block;
+  margin: 10px 0;
+}
+
+.sidenav select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.welcome-page {
+  text-align: center;
+  margin-top: 50px;
+  fill: #07090b;
+  color: #f1f1f1;
+  background-color: #3d454d;
+}
+
+.welcome-page button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #07090b;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.participants-button-container {
+  position: relative;
+}
+
+.participants-button {
+  position: relative;
+  background-color: #07090b;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+}
+
+.participants-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  z-index: 10;
+  white-space: nowrap;
+}
+
+.participants-button:hover .participants-list {
+  display: block;
+}
+
+.participant {
+  display: inline-block;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+/* Global styling for better readability */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Container for centering the table */
+table {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Table header styling */
+thead {
+  background-color: #3d454d;
+  color: white;
+}
+
+thead th {
+  padding: 10px;
+  text-align: left;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+/* Table body styling */
+tbody td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+
+/* Alternating row colors for better readability */
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Hover effect for table rows */
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Style for the entire row */
+tbody tr {
+  transition: background-color 0.3s ease;
+}
+
+/* Borders around the table */
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+/* Responsive table for smaller screens */
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+      display: block;
+  }
+
+  thead tr {
+      display: none;
+  }
+
+  tbody tr {
+      margin-bottom: 10px;
+      display: flex;
+      flex-direction: column;
+      border-bottom: none;
+  }
+
+  tbody td {
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 50%;
+      text-align: left;
+  }
+
+  tbody td:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 45%;
+      padding-left: 10px;
+      font-weight: bold;
+      content: attr(data-label);
+      text-transform: uppercase;
+  }
+}
+/* General container for the statistics section */
+.statistics-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Heading styling */
+.statistics-container h1 {
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Button styling */
+.statistics-container button {
+  padding: 10px 20px;
+  background-color: #3d454d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+/* Button hover effect */
+.statistics-container button:hover {
+  background-color: #3d454d;
+}
+
+/* RMSE value display styling */
+.rmse-display {
+  font-size: 18px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Make the RMSE value stand out */
+.rmse-display p {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+/* Add some spacing between RMSE values */
+.rmse-display + .rmse-display {
+  margin-top: 10px;
+}
+
+
